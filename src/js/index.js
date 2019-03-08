@@ -8,8 +8,9 @@ function Test(props) {
         </p>
     );
 }
+console.log('hoge');
 
 ReactDOM.render(
     <Test />,
-    document.getElementById('test')
+    document.getElementById('sample')
 );

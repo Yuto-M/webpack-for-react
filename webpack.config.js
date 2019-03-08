@@ -62,11 +62,6 @@ module.exports = {
                 //     to: 'assets/images',
                 //     context: 'src/'
                 // },
-                {
-                    from: 'tpl',
-                    to: '',
-                    context: 'src/'
-                }
             ],
         ),
     ],

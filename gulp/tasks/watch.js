@@ -8,7 +8,7 @@ function MyRegistry() {
         console.log('watch');
         gulp.watch('src', gulp.parallel(
             'script',
-            // 'ejs',
+            'ejs',
         ));
         gulp.watch('dist', gulp.series('reload'));
         done();
