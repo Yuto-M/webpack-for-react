@@ -8,7 +8,6 @@ const gulp = require('gulp');
 function MyRegistry() {
     DefaultRegistry.call(this);
     this.set('script', (done) => {
-        console.log('script');
         webpackStream(webpackConfig, webpack)
             .on('error', function (e) {
                 this.emit('end');

@@ -1,5 +1,4 @@
 const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -26,42 +25,17 @@ module.exports = {
                     loader: 'babel-loader',
                 }
             },
-            // {
-            //     test: /\.scss$/,
-            //     use: [
-            //         {
-            //             loader: MiniCssExtractPlugin.loader,
-            //             options: {},
-            //         },
-            //         {
-            //             loader: 'css-loader',
-            //             options: {
-            //                 url: false,
-            //                 sourceMap: true
-            //             }
-            //         },
-            //         {
-            //             loader: 'sass-loader',
-            //             options: {
-            //                 sourceMap: true
-            //             }
-            //         }
-            //     ]
-            // }
         ]
     },
     devtool: 'inline-source-map',
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: 'assets/css/[name].css'
-        }),
         new CopyWebpackPlugin(
             [
-                // {
-                //     from: 'images',
-                //     to: 'assets/images',
-                //     context: 'src/'
-                // },
+                {
+                    from: 'images',
+                    to: 'assets/images',
+                    context: 'src/'
+                },
             ],
         ),
     ],

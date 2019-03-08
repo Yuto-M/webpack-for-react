@@ -7,11 +7,9 @@ function MyRegistry() {
     DefaultRegistry.call(this);
     this.set('reload', (done) => {
         bs.reload();
-        console.log('reload');
         done();
     });
     this.set('serve', function (done) {
-        console.log('serve');
         bs.init({
             port: 3012,
             open: false,

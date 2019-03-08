@@ -1,12 +1,12 @@
 const util = require('util');
 const del = require('del');
 const DefaultRegistry = require('undertaker-registry');
+const config = require('../config.js');
 
 function MyRegistry() {
     DefaultRegistry.call(this);
     this.set('clean', (done) => {
-        console.log('clean');
-        del('./dist').then((paths) => {
+        del(config.paths.dist.root).then((paths) => {
             console.log(paths);
             done();
         }).catch((error) => {

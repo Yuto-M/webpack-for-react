@@ -5,10 +5,10 @@ const gulp = require('gulp');
 function MyRegistry() {
     DefaultRegistry.call(this);
     this.set('watch', (done) => {
-        console.log('watch');
         gulp.watch('src', gulp.parallel(
             'script',
             'ejs',
+            'scss',
         ));
         gulp.watch('dist', gulp.series('reload'));
         done();
